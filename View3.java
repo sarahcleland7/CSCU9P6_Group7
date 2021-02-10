@@ -29,12 +29,10 @@ public class View3 extends JPanel {
         display = new JTextField("No data", 15);
         add(display);
         
-        model.addObserver(this); //subscribe to the model
-        
     } // constructor
     
     // Called by controller to refresh the view:
-    public void update(Observable o, Object arg) {
+    public void update() {
         
         // Fetch (potentially) updated information and display it
         int a = model.getDataA();
